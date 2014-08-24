@@ -11,7 +11,7 @@ def import_data(des, db_name):
     tables = []
     for root, dirs, files in os.walk(des):
         for file_name in files:
-            if file_name.find('.TXT') == -1:
+            if file_name.find('.txt') == -1:
                 continue
             else:
                 table_name = file_name.split('.')[0]
@@ -52,4 +52,4 @@ def import_data(des, db_name):
                 mysql.close_connect()
 
 if __name__ == '__main__':
-    import_data("C:\\new_gdzq_v6\\T0002\\export\\CYB", "stock_cyb")
+    import_data("C:\\new_gdzq_v6\\T0002\\export", "daily")
